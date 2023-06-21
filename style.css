@@ -1,0 +1,16 @@
+h1{
+    color :#191970
+}
+h2{
+    color: #6495ED
+}
+h4{
+    color: #7B68EE
+}
+body {
+    background-color: #FFFFCC
+  }
+img{
+    border:5px dashed #778899;
+    border-radius: 20px;
+}

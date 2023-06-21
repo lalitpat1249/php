@@ -1,0 +1,130 @@
+<!doctype html>
+<html style="background-color:#2F4F4F;">
+
+<head>
+    <center>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <title>ploy and baitoey geng mak</title>
+    <meta charset="UTF-8">
+
+    <style>
+        #div1,
+        #div2,
+        #div3 {
+            float: center;
+            width: 300px;
+            height: 190px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #aaaaaa;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid white;
+            text-align: center;
+            color: aliceblue;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: Verdana;
+        }
+
+        h4 {
+            color: #FFFACD
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <h4>A text with different size</h4>
+    <h1><span style="color: #E8ABB5;">mai yark do this leaw</span></h1>
+    <hr>
+
+    <h2><span style="color: #B5B1C8;">korapin mai wai leaw<br>
+            lalitpat same same loay</span></h2>
+
+    <h3><span style="color: #F08080;">cutiee
+            <span style="color: #F0FFF0;">makmak
+            </span>
+        </span></h3>
+
+    <h4> A link with color </h4>
+    <a href="https://youtube.com/watch?v=lj3bhv2FGDc&si=EnSIkaIECMiOmarE" target="_blank">click here</a><br>
+
+    <h4>A text with paragraph function </h4>
+    <h3><span style="color: #B2967D;">love love I need somebody to love &#128151
+        </span></h3><br>
+
+    <h4>insert image</h4>
+    <img src="96161956-0054-4ACE-B347-B159E4474D0E.jpg" height="500" width="400"><br><br>
+
+    <h4>drag and drop</h4>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag1" src="50B13D62-E162-4753-AFAF-A247C3FEE6B3.jpg" draggable="true" ondragstart="drag(event)"
+            height="190" width="300">
+    </div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <h4>Truth Table</h4>
+    <table style="width: 60%;">
+        <tr>
+            <th> p </th>
+            <th> r </th>
+            <th>p v p</th>
+            <th>p v r</th>
+            <th>r v p</th>
+            <th>r v r</th>
+        </tr>
+        <tr>
+            <td> T </td>
+            <td> F </td>
+            <td> T </td>
+            <td> F </td>
+            <td> F </td>
+            <td> F </td>
+        </tr>
+    </table>
+</center>
+</body>
+
+</html>
